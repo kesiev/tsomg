@@ -1,0 +1,1547 @@
+HTML, BODY {
+    overscroll-behavior: none;
+    overflow: hidden;
+    width:100%;
+    height: 100%;
+}
+
+BODY {
+    font-family: 'Seshat', serif;
+    color:#333333;
+    background-color: #333333;
+    font-size:16px;
+    padding: 0;
+    margin: 0;
+}
+
+.screen {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #eeeeee;
+    position: relative;
+    height:100%;
+    width:100%;
+    margin:auto;
+    overflow: hidden;
+}
+
+INPUT[type="text"], SELECT {
+    outline: none;
+    font-family: 'Seshat', serif;
+    font-size:16px;
+    border:0;
+    border-bottom:1px dashed #333333;
+    background-color: transparent;
+}
+
+textarea {
+    outline: none;
+    font-family: 'Seshat', serif;
+    font-size:16px;
+    border:0;
+    border-top:1px dashed #333333;
+    border-bottom:1px dashed #333333;
+    background-color: transparent;
+    resize: none;
+}
+
+.list > .headercontainer {
+    font-size: 18px;
+    position: relative;
+    height:48px;
+}
+
+.list > .headercontainer > .header {
+    font-weight: bold;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:10px;
+    right:53px;
+    line-height: 48px;
+}
+
+.list > .headercontainer > .add {
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 22px;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    width:48px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.list .body > DIV {
+    border-top:1px solid #bbbbbb;
+}
+
+.list .body > DIV:last-child {
+    border-bottom:1px solid #bbbbbb;
+}
+
+::placeholder {
+    color: #bbbbbb;
+    opacity: 1;
+}
+
+.inputrow > .label {
+    box-sizing:border-box;
+    padding:10px;
+    display: inline-block;
+    width:30%;
+}
+
+.inputrow .inputcontainer {
+    box-sizing:border-box;
+    padding:10px;
+    display: inline-block;
+    width:70%;
+}
+
+.inputrow > .inputcontainer > .input {
+    width:100%;
+}
+
+.textarearow > .label {
+    margin:10px 10px 0 10px;
+}
+
+.textarearow > .textareacontainer {
+    box-sizing:border-box;
+    padding:10px;
+    width:100%;
+    position: relative;
+}
+
+.textarearow > .textareacontainer > .textarea {
+    box-sizing:border-box;
+    width:100%;
+}
+
+.staticrow {
+    position: relative;
+}
+
+.staticrow > .label {
+    width:100%;
+    padding: 15px 10px;
+}
+
+.staticrow > .label > .placeholder {
+    color:#bbbbbb;
+}
+
+.staticrow > .delete {
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    right:0;
+    width:48px;
+    top:0;
+    bottom:0;
+    text-align: center;
+    line-height: 48px;
+}
+
+.selectrow > .label {
+    box-sizing:border-box;
+    padding:10px;
+    display: inline-block;
+    width:30%;
+}
+
+.selectrow > .selectcontainer {
+    box-sizing:border-box;
+    padding:10px;
+    display: inline-block;
+    width:70%;
+}
+
+.selectrow > .selectcontainer > .select {
+    width:100%; 
+}
+
+.selectrow > .selectcontainer > .select > .option.placeholder {
+    color:#bbbbbb;
+}
+
+.collapsable > .label {
+    position: relative;
+    height:48px;
+}
+
+.collapsable > .label > .labelwidget {
+    position: absolute;
+    right:48px;
+    top:5px;
+    bottom:5px;
+}
+
+.collapsable > .label > .labelwidget {
+    position: relative;
+}
+
+.collapsable > .label.open > .labelwidget {
+    display: none;
+}
+
+.collapsable > .label > .labelwidget > .counter {
+    cursor: pointer;
+    position: absolute;
+    right:0;
+    top:4px;
+    border:2px solid #bbbbbb;
+    width:29px;
+    height:29px;
+    border-radius: 200px;
+    text-align: center;
+    line-height: 29px;
+    color: #333333;
+}
+
+.collapsable > .label > .labelwidget > .counterlabel {
+    position: absolute;
+    right:2px;
+    width:29px;
+    top:0;
+    text-align: center;
+    font-size: 12px;
+    text-shadow: -1px -1px 0 #eeeeee, 1px -1px 0 #eeeeee, -1px 1px 0 #eeeeee, 1px 1px 0 #eeeeee;
+    color:#bbbbbb;
+}
+
+.collapsable > .label > .labeltext {
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    left:10px;
+    top:0;
+    bottom:0;
+    right:95px;
+    line-height: 48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.collapsable > .label > .labeltext > .placeholder {
+    color:#bbbbbb;
+}
+
+.collapsable > .label > .labeltext > I {
+    color:#bbbbbb;
+}
+
+.collapsable > .label.open > .labeltext > I {
+    color:#eeeeee;
+}
+
+.collapsable > .label > .delete {
+    cursor: pointer;
+    font-size: 22px;
+    position: absolute;
+    right:10;
+    width:28px;
+    line-height: 48px;
+    top:0;
+    bottom:0;
+    text-align: center;
+}
+
+.collapsable > .label.open {
+    background-color: #bbbbbb;
+    color: #eeeeee;
+}
+
+.collapsable > .label.open > .labeltext > .placeholder {
+    color:#eeeeee;
+}
+
+.collapsable > .body {
+    border-left:5px solid #bbbbbb;
+}
+
+.itemrow  {
+    position: relative;
+    height:48px;
+}
+
+.itemrow > .quantitycontainer {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    width:50px;
+    padding:15px 10px;
+}
+
+.itemrow > .quantitycontainer > .quantity {
+    width: 100%;
+    text-align: right;
+}
+
+.itemrow > .tagscontainer {
+    position:absolute;
+    top:0;
+    left:60px;
+    bottom:0;
+    right:53px;
+    padding:15px 10px;
+}
+
+.itemrow > .tagscontainer > .tags {
+    width: 100%;
+}
+
+.itemrow > .delete {
+    font-size: 22px;
+    position: absolute;
+    right:0;
+    width:48px;
+    top:0;
+    bottom:0;
+    text-align: center;
+    line-height: 48px;
+}
+
+.rpg {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0px;
+    bottom:0px;
+}
+
+.assistant {
+    z-index: 100;
+    padding:10px;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #333333;
+    color:#eeeeee;
+    border-top:2px solid #eeeeee;
+}
+
+.assistant > .clockbox {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:-25px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.assistant > .clockbox > .clock {
+    display: inline-block;
+    width:30px;
+    height:30px;
+    border:10px solid #333333;
+    background-color: #bbbbbb;
+    border-radius: 200px;
+    position: relative;
+}
+
+.assistant > .clockbox > .clock > .clockarm {
+    position: absolute;
+    top:15px;
+    left:-1px;
+    background-color: #333333;
+    width:32px;
+    height:16px;
+    transform-origin: 16px 0px;
+    border-radius:0 0 100px 100px;
+    transition: all 1s;
+    background-color: #333333;
+}
+
+.assistant > .clockbox > .clock.done > .clockarm {
+    background-color: #f00;
+}
+
+.ruler {
+    z-index: 100;
+    position: absolute;
+    left:0px;
+}
+
+.ruler > .symbol {
+    width: 20px;
+    height: 20px;
+    border:1px solid #eeeeee;
+    background-color: #333333;
+    transform: translate(-14px,-10px) rotate(45deg);
+}
+
+.exit {
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    left:0px;
+    top:10px;
+    background-color: #333333;
+    padding:5px;
+    width: 30px;
+    border-radius: 0 100px 100px 0;
+    color:#eeeeee;
+    border:2px solid #eeeeee;
+    border-left:0px;
+    text-align: right;
+    font-size: 22px;
+}
+
+.statsrow {
+    height:50px;
+    background-color: #bbbbbb;
+    text-align: center;
+    color:#eeeeee;
+    margin-bottom:15px;
+}
+
+.statsrow > .stat {
+    display: inline-block;
+    position: relative;
+    height:40px;
+}
+
+.statsrow > .stat > .valuecontainer {
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    top:15px;
+    left:0;
+    right:0;
+}
+
+.statsrow > .stat > .valuecontainer > .value {
+    position: relative;
+    display: inline-block;
+    border:2px solid #bbbbbb;
+    background-color: #eeeeee;
+    padding:10px;
+    color:#333333;
+    border-radius: 100px;
+    width: 22px;
+    height:22px;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+.statsrow > .stat.single > .valuecontainer > .value > .max {
+    display: none;
+}
+
+.statsrow > .stat.max > .valuecontainer > .value > .max {
+    position: absolute;
+    right:2px;
+    top:2px;
+    bottom:2px;
+    width:20px;
+    line-height: 38px;
+    border-radius: 0px 100px 100px 0;
+    background-color: #bbbbbb;
+    color:#eeeeee;
+}
+
+.statsrow > .stat.max > .valuecontainer > .value > .attribute {
+    position: absolute;
+    left:2px;
+    top:3px;
+    bottom:2px;
+    width:17px;
+    line-height: 36px;
+}
+
+.statsrow > .stat > .label {
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    font-size: 12px;
+}
+
+.search > .queryview > .context, .search > .resultview > .bar > .context {
+    margin-bottom:10px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search > .resultview > .bar {
+    position: relative;
+}
+
+.search > .queryview > .querybox {
+    margin-bottom: 20px;
+}
+
+.search > .queryview > .querybox > .query {
+    box-sizing: border-box;
+    border-bottom:1px dashed #eeeeee;
+    color:#eeeeee;
+    width:80%;
+}
+
+.search > .queryview > .querybox > .mode {
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-block;
+    border:1px solid #eeeeee;
+    border-bottom-width: 2px;
+    padding:2px;
+    width:20%;
+    text-align: center;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+}
+
+.search > .queryview > .results {
+    max-height: 21vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.search > .queryview > .results > .result {
+    cursor: pointer;
+    padding:10px;
+    background-color: #bbbbbb;
+    color:#333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border:1px solid #bbbbbb;
+    margin-bottom:1px;
+}
+
+.search > .queryview > .results.loading > .result {
+    background-color: #333333;
+    color:#bbbbbb;
+    border:1px solid #bbbbbb;
+}
+
+.search > .queryview > .results > .result > .stat {
+    background-color: #333333;
+    border:1px solid #333333;
+    width: 30px;
+    text-align: center;
+    padding:4px;
+    border-radius: 5px;
+    color:#bbbbbb;
+    display: inline-block;
+    margin-right:5px;
+    font-size: 12px;
+}
+
+.search > .queryview > .results.loading > .result > .stat {
+    background-color:transparent;
+    color:#bbbbbb;
+    border:1px solid #bbbbbb;
+}
+
+.search > .queryview > .results > .result > .stat.basic {
+    background-color:transparent;
+    color:#333333;
+}
+
+.search > .queryview > .results.loading > .result > .stat.basic {
+    color:#bbbbbb;
+}
+
+.search > .resultview > .bar > .back {
+    position:absolute;
+    text-align: center;
+    width:48px;
+    height:48px;
+    line-height: 48px;
+    font-size: 22px;
+    top:-10px;
+    right:-10px;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.search > .resultview > .back {
+    margin-bottom: 10px;
+}
+
+.search > .resultview > .result > .label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.search > .resultview > .result > .answer {
+    margin: 10px 0;
+}
+
+.search > .resultview > .result > .actions {
+    margin-top:10px;
+    text-align: center;
+    max-height: 41vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.search > .resultview > .result > .actions > .actionslist {
+    margin-bottom:10px;
+}
+
+.search > .resultview > .result > .actions > .actionslist > .action {
+    cursor: pointer;
+    margin:5px;
+    display: inline-block;
+    border:1px solid #eeeeee;
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    min-width: 100px;
+}
+
+.search > .resultview > .result > .actions > .actionslist > .action.unselected {
+    border-color: #bbbbbb;
+}
+
+.search > .resultview > .result > .actions > .actionslist > .action.unselected > .type {
+    background-color: #bbbbbb;
+}
+
+.search > .resultview > .result > .actions > .actionslist > .action.unselected > .text {
+    color: #bbbbbb;
+}
+
+.search > .resultview > .result > .actions > .actionslist > .action > .type {
+    padding:5px;
+    background-color: #eeeeee;
+    color: #333333;
+    font-size: 12px;
+    height:100%;
+}
+
+.search > .resultview > .result > .actions > .actionslist > .simple.action > .type {
+    display: none;
+}
+
+.search > .resultview > .result > .actions > .actionslist > .action > .type * {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.search > .resultview > .result > .actions > .actionslist > .action > .text {
+    padding:5px;
+    max-width:250px;
+    max-height: 33px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.search > .resultview > .result > .actions > .actionslist > .simple.action > .text {
+    padding:5px;
+}
+
+.search > .resultview .process {
+    font-size: 12px;
+    display: inline-block;
+}
+
+.search > .resultview .process > .rolldice, .search > .resultview .process > .rollstatdice {
+    display: inline-block;
+    width:15px;
+    height:15px;
+    text-align: center;
+    line-height: 15px;
+    border:1px solid #eeeeee;
+    margin-right:3px;
+    border-radius: 3px;
+}
+
+.search > .resultview .process > .rollstatdice {
+    background-color: #eeeeee;
+    color:#333333;
+}
+
+.search > .resultview .process > .applybonus {
+    display: inline-block;
+    height:15px;
+    line-height: 15px;
+    padding:0 5px;
+    background-color:#bbbbbb;
+    border:1px solid #bbbbbb;
+    color:#333333;
+    margin-right:3px;
+    border-radius: 3px;
+}
+
+.search > .resultview .process > .result, .search > .resultview .process > .rollstat, .search > .resultview .process > .sumvalue {
+    display: inline-block;
+    margin-right:3px;
+}
+
+.search > .resultview .process > .outcome {
+    display: inline-block;
+    width:13px;
+    height:13px;
+    border-radius: 100px;
+    border:1px solid #eeeeee;
+    margin-right:3px;
+}
+
+.search > .resultview .process > .outcome.failSuccess {
+    background-color: #bbbbbb;
+}
+
+.search > .resultview .process > .outcome.success {
+    background-color: #eeeeee;
+}
+
+.search > .resultview .process > .outcome.fail {
+    background-color: #333333;
+}
+
+.messagebox {
+    position: absolute;
+    z-index: 200;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color: rgba(51,51,51,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.messagebox > .box {
+    background-color: #333333;
+    border:2px solid #eeeeee;
+    color:#eeeeee;
+    width: 80%;
+}
+
+.messagebox > .box > .text {
+    text-align: center;
+}
+
+.messagebox > .box > .text, .messagebox > .box > .extras {
+    text-align: center;
+    margin:10px;
+}
+
+.messagebox > .box > .text > .notes {
+    margin:10px 0;
+    padding:10px 0;
+    border-top:1px solid #eeeeee;
+    border-bottom:1px solid #eeeeee;
+}
+
+.messagebox > .box > .text > .notes > .placeholder {
+    color:#bbbbbb;
+}
+
+.messagebox > .box > .buttons {
+    text-align: right;
+    margin:20px 10px 10px 10px;
+}
+
+.messagebox > .box > .buttons > .button {
+    cursor: pointer;
+    display: inline-block;
+    border:1px solid #eeeeee;
+    border-bottom-width: 2px;
+    padding:10px;
+    text-align: center;
+    border-radius: 5px;
+    margin:0px 5px;
+}
+
+.messagebox > .box > .extras .smallbutton {
+    cursor: pointer;
+    display: inline-block;
+    border:1px solid #eeeeee;
+    border-bottom-width: 2px;
+    padding:10px;
+    text-align: center;
+    border-radius: 5px;
+    margin:5px;
+    width: 30px;
+}
+
+.messagebox > .box > .extras .smallinput {
+    border-bottom:1px dashed #eeeeee;
+    color:#eeeeee;
+    text-align: center;
+    width: 60px;
+}
+
+.messagebox > .box > .extras .smallbutton {
+    cursor: pointer;
+    display: inline-block;
+    border:1px solid #eeeeee;
+    border-bottom-width: 2px;
+    padding:10px;
+    text-align: center;
+    border-radius: 5px;
+    margin:5px;
+    width: 30px;
+}
+
+.messagebox > .box > .extras .pluslabel, .messagebox > .box > .extras .minuslabel {
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color:#eeeeee;
+    color: #333333;
+    width: 30px;
+    padding:10px 0;
+    text-align: center;
+    visibility: hidden;
+}
+
+/* Intro */
+
+@keyframes progappear1 {
+    from {opacity:0;}
+    50% {opacity: 1;}
+    to {opacity: 1;}
+}
+
+@keyframes progappear2 {
+    from {opacity:0;}
+    80% {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes progdisappear {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+
+@keyframes scrollunroll {
+    from { opacity:0;transform: translate(0,50vh) scale(100) rotate(-30deg);}
+    10% { opacity:1;transform: translate(0,50vh) scale(100) rotate(-30deg);}
+    30% {transform: translate(0,65vh) scale(1) rotate(-5deg);}
+    45% {transform: translate(0,60vh) scale(1) rotate(2deg);}
+    55% {transform: translate(0,62vh) scale(1) rotate(0deg);}
+    80% {transform: translate(0,0);}
+    to {}
+}
+
+@keyframes paperunroll {
+    from {transform: scale(1,1); color:#333333;  }
+    20% {transform: rotate(-2deg) scale(1,0.5); color:#333333;  }
+    60% {transform: rotate(2deg) scale(1,0.2); color:#333333; }
+    to {transform: rotate(0deg) scale(1,1); color:#eeeeee; }
+}
+
+@keyframes rollleave {
+    from {transform: translate(0,0) rotate(0);  }
+    to {transform: translate(0,-100vh) rotate(-10deg); }
+}
+
+@keyframes sheetleave {
+    from {transform: scale(1,1) translate(0,0); color:#eeeeee;  }
+    to {transform: scale(0.01,2) translate(0,100vh); color:#333333;  }
+}
+
+@keyframes itemappear {
+    from { height:0;opacity: 0;  }
+    to { height:48px;opacity: 1;  }
+}
+
+@keyframes itemdisappear {
+    from { transform: translate(5px,0);height:48px;opacity: 1;color: #333333;  }
+    2% { transform: translate(-5px,0);height:48px;opacity: 1;color: #333333;  }
+    4% { transform: translate(5px,0);height:48px;opacity: 1;color: #333333;  }
+    6% { transform: translate(-5px,0);height:48px;opacity: 1;color: #333333;  }
+    8%,20% { transform: translate(0,0);height:48px;opacity: 1;color: #333333;  }
+    40%, 60% { transform: translate(0,0);height:48px;opacity: 1; color:#bbbbbb; }
+    to { transform: translate(0,0);height:0;opacity: 0; color:#bbbbbb; }
+}
+
+@keyframes editpanelappear {
+    from { bottom:-50%;  }
+    to { bottom:0;  }
+}
+
+@keyframes editpaneldisappear {
+    from { bottom:0;  }
+    to { bottom:-50%;  }
+}
+
+@keyframes listscrolling {
+    from { transform: translate(0,0); }
+    20% { transform: translate(0,-146px); }
+    40% { transform: translate(0,-96px); }
+    60% { transform: translate(0,-48px); }
+    80% { transform: translate(0,-96px); }
+    to { transform: translate(0,0); }
+}
+
+@keyframes listleaving {
+    from { transform: translate(0,0); opacity: 1; }
+    to { transform: translate(0,-100vh); opacity: 0; }
+}
+
+@keyframes oracleappear {
+    from { top:100%;  }
+    10% { top:0%;  }
+    to { top:-100%;  }
+}
+
+@keyframes oracleleave {
+    from { top:-100%;  }
+    to { top:110%;  }
+}
+
+
+@keyframes arrowappear {
+    from { left:50%; transform: translate(0,-20vh) rotate(0) scale(6); background-color: #333333; border-color: #eeeeee;}
+    50%,60% { left:50%; transform: translate(0,40vh) rotate(-585deg) scale(1); background-color: #333333; border-color: #eeeeee;}
+    70%,80% { left:60%; transform: translate(0,40vh) rotate(-565deg) scale(2); background-color: #333333; border-color: #eeeeee;}
+    90% { left:-11px; transform: translate(0,40vh) rotate(-765deg) scale(1); background-color: #333333; border-color: #eeeeee;}
+    91% { left:-11px; transform: translate(0,40vh) rotate(-765deg) scale(1.5); background-color: #eeeeee; border-color: #333333;}
+    to { left:-11px; transform: translate(0,40vh) rotate(-765deg) scale(1); background-color: #333333; border-color: #eeeeee;}
+}
+
+@keyframes arrowleave {
+    from { left:-11px; transform: translate(0,40vh) rotate(-765deg) scale(1); }
+    20%,30% { left:50%; transform: translate(0,40vh) rotate(0) scale(2); }
+    to { left:50%; transform: translate(0,150vh) rotate(765deg) scale(2);}
+}
+
+@keyframes clockappear {
+    from {  transform: translate(0,90px) }
+    to {  transform: translate(0,0)}
+}
+
+@keyframes clockmove {
+    from {  transform: rotate(0); background-color: #333333; }
+    90% {  transform: rotate(180deg); background-color: #333333; }
+    to {  transform: rotate(180deg); background-color: #f00; }
+}
+
+@keyframes clockend {
+    from { transform: scale(1,1) translate(0,0); background-color: #f00; }
+    10% { transform: scale(0.6,0.1) translate(0,10px); background-color: #f00; }
+    20% { transform: scale(0.6,0.6) translate(0,0); background-color: #333333; }
+    30% { transform: scale(0.6,0.1) translate(0,10px); background-color: #333333; }
+    40%,50% { transform: scale(0.6,0.6) translate(0,0); background-color: #333333; }
+    60%,65% { transform: scale(0.6,0.6) translate(-20px,0); background-color: #333333; }
+    70%,75% { transform: scale(0.6,0.6) translate(20px,0); background-color: #333333; }
+    80%,90% { transform: scale(0.6,0.6) translate(0,0); background-color: #333333; }
+    to { transform: scale(1,1) translate(0,0); background-color: #333333; }
+}
+
+@keyframes clockzoom {
+    from  {transform: translate(0,0) scale(1);}
+    50%  {transform: translate(0,-50vh) scale(1);}
+    55%  {transform: translate(0,-50vh) scale(0.9);}
+    to {transform: translate(0,-50vh) scale(20); }
+}
+
+@keyframes circlespin {
+    from  {transform: translate(-50%,0) rotate(0);}    
+    to  {transform: translate(-50%,0) rotate(360deg);}    
+}
+
+.intro > .fullscreen, .intro > .rollscreen, .intro > .editscreen, .intro > .clockscene > .container, .intro > .endscene > .container {
+    transition: all 2s;
+    position: absolute;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    top:0px;
+}
+
+.intro .list > .headercontainer > .add,
+.intro .collapsable > .label > .delete,
+.intro .collapsable > .label > .labeltext {
+    cursor: default;
+}
+
+.intro.leave {
+    transition: all 2s;
+    opacity: 0;
+}
+
+.intro > .fullscreen, .intro > .rollscreen, .intro > .clockscene > .container, .intro > .endscene > .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro > .fullscreen.leave {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.intro .panel {
+    text-align: center;
+    padding:20px;
+}
+
+.intro .panel .text {
+    line-height: 40px;
+}
+
+.intro > .fullscreen > .panel > .text {
+    opacity: 0;
+    animation-name: progappear1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .fullscreen > .panel > .controls {
+    opacity: 0;
+    animation-name: progappear2;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .rollscreen > .roll {
+    animation-name: scrollunroll;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .rollscreen > .roll > .rollbar {
+    position: relative;
+    border:5px solid #eeeeee;
+    background-color: #333333;
+    height:40px;
+}
+
+.intro > .rollscreen.leave > .roll > .rollbar {
+    animation-name: rollleave;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .rollscreen > .roll > .rollbar > .roll1, .intro > .rollscreen > .roll > .rollbar > .roll2 {
+    position: absolute;
+    top:-10px;
+    left:10px;
+    width:20px;
+    border:5px solid #eeeeee;
+    background-color: #333333;
+    height:50px;
+    z-index: 10;
+}
+
+.intro > .rollscreen > .roll > .rollbar > .roll2 {
+    left: auto;
+    right:10px;
+}
+
+.intro > .rollscreen > .roll > .sheet {
+    transition: all 2s;
+    margin:-50px 40px 0 40px;
+    border:5px solid #eeeeee;
+    background-color: #333333;
+    padding:40px 0 40px;
+    color:#eeeeee;
+    transform-origin: 50% 0;
+    animation-name: paperunroll;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .rollscreen.leave > .roll > .sheet {
+    animation-name: sheetleave;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .rollscreen > .roll > .sheet .button {
+    border-color: #eeeeee;
+    animation-name: progappear2;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .editscreen > .allpanels {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:-50%;
+    padding:20px;
+    background-color: #333333;
+    color:#eeeeee;
+    border-top:2px solid #eeeeee;
+    line-height: 40px;
+    text-align: center;
+    animation-delay: 0.5s;
+    animation-name: editpanelappear;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    z-index: 100;
+}
+
+.intro > .editscreen > .allpanels > .controls > .button {
+    opacity:0;
+    border-color: #eeeeee;
+    margin:10px 0;
+    animation-name: progappear2;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .editscreen > .editor {
+    position: absolute;
+    left:1px;
+    right:1px;
+    top:0px;
+    bottom:0px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.intro > .editscreen > .editor > .editorcontent {
+    width: 100%;
+}
+
+.intro > .editscreen > .editor > .editorcontent .animated {
+    height: 0;
+    opacity: 0;
+    animation-name: itemappear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .editscreen > .editor > .editorcontent .hidden {
+    height: 0;
+    opacity: 0;
+}
+
+.intro > .editscreen > .editor > .editorcontent .animated {
+    animation-name: itemappear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .editscreen > .editor > .editorcontent .animated.remove {
+    height: 48px;
+    opacity: 1;
+    animation-name: itemdisappear;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .editscreen.leavefirst > .firstpanel, .intro > .editscreen.leavesecond > .secondpanel, .intro > .editscreen.leavethird > .thirdpanel, .intro > .editscreen.leavefourth > .fourthpanel {
+    bottom: 0;
+    animation-delay: 0s;
+    animation-name: editpaneldisappear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .editscreen.leavesecond > .editor > .editorcontent {
+    animation-delay: 5s;
+    animation-name: listscrolling;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+}
+
+.intro > .editscreen.editscreen.leavethird > .editor > .editorcontent {
+    animation-delay: 0s;
+    animation-name: listleaving;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count:1;
+}
+
+.intro > .editscreen > .secondpanel {
+    animation-delay: 10s;
+}
+
+.intro > .editscreen > .thirdpanel {
+    animation-delay: 5s;
+}
+
+.intro > .editscreen > .thirdpanel {
+    animation-delay: 5s;
+}
+
+.intro > .editscreen > .popuppanel > .controls > .button {
+    border-color: #eeeeee;
+    margin:10px 0;
+    animation-name: progappear2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .editscreen > .firstpanel > .controls > .button {
+    animation-delay: 1s;
+}
+
+.intro > .editscreen > .secondpanel > .controls > .button {
+    animation-delay: 11s;
+}
+
+.intro > .editscreen > .thirdpanel > .controls > .button {
+    animation-delay: 6s;
+}
+
+.intro > .editscreen > .fourthpanel > .controls > .button {
+    animation-delay: 6s;
+}
+
+.intro > .editscreen > .oraclebar {
+    position: absolute;
+    left:10px;
+    right:10px;
+    top:100%;
+    animation-name: oracleappear;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .editscreen.leavefourth > .oraclebar {
+    animation-name: oracleleave;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .editscreen > .oraclebar > .oracleitem {
+    padding:10px;
+    background-color: #bbbbbb;
+    color:#333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border:1px solid #bbbbbb;
+    border-bottom:1px solid #eeeeee;
+}
+
+.intro > .editscreen > .arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border:1px solid #eeeeee;
+    background-color: #333333;
+    animation-name: arrowappear;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    z-index: 150;
+}
+
+.intro > .editscreen.leavefourth > .arrow {
+    animation-name: arrowleave;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    z-index: 150;
+}
+
+
+.intro > .clockscene > .clockbox {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:-90px;
+    text-align: center;
+    transform: translate(0,90px);
+    animation-delay: 3s;
+    animation-name: clockappear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .clockscene > .clockbox > .clock {
+    position: relative;
+    display: inline-block;
+    width:120px;
+    height:120px;
+    border-radius: 200px;
+    border:20px solid #333333;
+    background-color: #bbbbbb;
+}
+
+.intro > .clockscene > .container {
+    opacity: 0;
+    animation-delay: 6s;
+    animation-name: progappear1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .clockscene > .clockbox > .clock > .clockarm {
+    position: absolute;
+    top:60px;
+    left:2px;
+    width:116px;
+    height:58px;
+    transform-origin: 61px 0px;
+    border-radius:0 0 200px 200px;
+    background-color: #333333;
+    transform-origin: 58px 0;
+    animation-timing-function: linear;
+    animation-delay: 4s;
+    animation-name: clockmove;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .clockscene > .container > .panel > .controls {
+    animation-name: progappear2;
+    animation-duration: 13s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .clockscene.leave > .clockbox > .clock > .clockarm {
+    transform-origin: 50% 50%;
+    height:116px;
+    top:2px;
+    border-radius:200px;
+    animation-delay: 0s;
+    animation-name: clockend;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .clockscene.leave > .clockbox {
+    animation-delay: 0s;
+    border-radius:200px;
+    animation-name: clockzoom;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .clockscene.leave > .container {
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-name:progdisappear;
+}
+
+.intro > .endscene > .container > .panel > .text {
+    color:#eeeeee;
+    opacity: 0;
+    animation-delay: 5s;
+    animation-name: progappear1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .endscene > .container > .panel > .controls {
+    opacity: 0;
+    animation-delay: 10s;
+    animation-name: progappear2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.intro > .endscene > .container > .panel > .controls > .button {
+    color:#eeeeee;
+    border-color: #eeeeee;
+}
+
+.intro .button {
+    cursor: pointer;
+    line-height: normal;
+    display: inline-block;
+    border:1px solid #333333;
+    border-bottom-width: 2px;
+    padding:10px;
+    text-align: center;
+    border-radius: 5px;
+    margin:20px 0 0 0;
+}
+
+/* Title screen */
+
+.title, .cover {
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 100;
+}
+
+.title.appear, .cover.appear {
+    opacity: 1;
+}
+
+.title.disappear, .cover.disappear {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cover {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title > .logo {
+    position: relative;
+    z-index: 100;
+    margin: 3vh auto;
+    width: 90%;
+    min-width: 200px;
+    height: 30vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../images/logo.svg);
+}
+
+.title > .buttons, .cover > .buttons {
+    width:100%;
+    position: relative;
+    text-align: center;
+    z-index: 100;
+}
+
+.title > .buttons {
+    margin-top: 10vh;
+}
+
+.title > .buttons > .button {
+    width:40%;
+}
+
+.cover > .buttons {
+    width: 80%;
+    text-align: center;
+}
+
+.title > .footer, .cover > .footer {
+    font-size: 12px;
+    z-index: 90;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+}
+
+.title > .circle {
+    position: absolute;
+    width:400vw;
+    height:400vw;
+    left:0;
+    top:0;
+    left:50%;
+    top:45%;
+    transform-origin: 50% 50%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../images/circle.svg);
+    animation-name: circlespin;
+    animation-duration: 240s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+
+.title > .footer A {
+    color:#333333;
+}
+
+.title > .buttons > .button, .cover > .buttons > .button {
+    background-color: #eeeeee;
+    cursor: pointer;
+    display: block;
+    border:1px solid #333333;
+    border-bottom-width: 2px;
+    padding:10px;
+    text-align: center;
+    border-radius: 5px;
+    margin:0px auto;
+    margin-bottom: 20px;
+}
+
+.cover > .buttons > .button {
+    width: 30%;
+    display: inline-block;
+    margin:0 5px;
+}
+
+.title > .buttons > .text, .cover > .buttons > .text {
+    width:80%;
+    margin:0 auto 30px auto;
+    text-shadow: -1px -1px 0 #eeeeee, 1px -1px 0 #eeeeee, -1px 1px 0 #eeeeee, 1px 1px 0 #eeeeee;
+}
+
+.cover > .buttons > .text {
+    text-align: center;
+}
+
+.title > .buttons > .text A {
+    color: #333333;
+}
+
+.title > .buttons > .text > H1 {
+    font-size: 16px;
+}
+
+.title > .buttons > .text > .separator {
+    margin:10px 0;
+    height:1px;
+    background-color: #333333;
+    border: 1px solid #eeeeee;
+}
+
+.title > .buttons > .text > H1, .title > .buttons > .text > P {
+    margin:5px;
+    text-align: center;
+}
+
+.title .buttons .notes {
+    margin-top:10px;
+    font-size: 12px;
+}
+
+.title .buttons .notes .placeholder {
+    color:#bbbbbb;
+}
+
+/* Manual */
+
+.manual {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0px;
+    bottom:0px;
+}
+
+.manual > .content {
+    padding:20px 20px 40px 20px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.manual > .content A {
+    color: #333333;
+}
+
+.manual > .content UL {
+    padding-left: 20px;
+}
+
+.manual > .content > .banner {
+    margin-bottom: 20px;
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../images/logo.svg);
+}

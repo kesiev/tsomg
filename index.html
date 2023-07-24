@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>The Scroll of Many Glances</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:image" content="https://www.kesiev.com/tsomg/screenshot.png">
+    <meta property="og:description" content="The Scroll of Many Glances (TSoMG) is an experimental app-supported masterless fantasy RPG thought for mobile devices and inspired by PbtA/OSR tabletop role-play games.">
+    
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="font/Seshat/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/ui.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <!-- Core -->
+    <script src="js/globals.js"></script>
+    <script src="js/randomizer.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/rpg.js"></script>
+    <script src="js/interface.js"></script>
+    <script src="js/intro.js"></script>
+    <script src="js/manual.js"></script>
+    <script src="js/title.js"></script>
+
+    <!-- Embeddings -->
+    <script src="js/embeddings.js/assets/embeddings.js"></script>
+    <script src="js/databases/default.js"></script>
+</head>
+<body onload="onl()"></body>
+<script>
+
+function onl() {
+    let title=new Title();
+    title.run();
+}
+
+</script>
+</html>
